@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>uk.gov.hscic.ssd</groupId>
+    <artifactId>hscic-ssd-starter-tomcat</artifactId>
+    <version>0.1.0.BUILD-SNAPSHOT</version>
+    <name>HSCIC SSD Starter Tomcat</name>
+    <description>HSCIC SSD parent POM project for embedded Tomcat dependencies.</description>
+    <url>http://</url>
+
+    <parent>
+        <groupId>uk.gov.hscic.ssd</groupId>
+        <artifactId>hscic-ssd-parent</artifactId>
+        <version>0.1.0.BUILD-SNAPSHOT</version>
+        <relativePath>../hscic-ssd-parent</relativePath>
+    </parent>
+
+    <!-- === PROPERTIES ============================================================================================ -->
+
+    <properties>
+
+        <main.basedir>${basedir}/..</main.basedir>
+
+    </properties>
+
+    <!-- === DEPENDENCIES ========================================================================================== -->
+
+    <dependencies>
+
+        <!-- Embedded Tomcat -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-el</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-logging-juli</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-websocket</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jsp-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <!-- === METADATA ============================================================================================== -->
+
+    <organization>
+        <name>Health and Social Care Information Centre</name>
+        <url>http://www.hscic.gov.uk</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>HSCIC Licence</name>
+            <url>http://systems.hscic.gov.uk/sa/tools/toolslicence.pdf</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>${vcs.server.url}/${project-name}</url>
+        <connection>scm:${vcs.server.scm}:${vcs.server.url}/${project-name}/trunk/${project.artifactId}</connection>
+    </scm>
+
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://jenkins.development.ssd.corp.internal/</url>
+    </ciManagement>
+
+    <issueManagement>
+        <system>Jira</system>
+        <url>https://jira.development.ssd.corp.internal/</url>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <id>dast7</id>
+            <name>Daniel Stefaniuk</name>
+            <email>daniel.stefaniuk@hscic.gov.uk</email>
+        </developer>
+    </developers>
+
+</project>
