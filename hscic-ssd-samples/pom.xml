@@ -2,9 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>uk.gov.hscic.ssd</groupId>
     <artifactId>hscic-ssd-samples</artifactId>
-    <version>0.1.0.BUILD-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>HSCIC SSD Corporate POM Samples</name>
     <description>HSCIC SSD corporate POM sample projects.</description>
@@ -23,10 +21,11 @@
         <!-- Java JDK -->
         <java.version>1.8</java.version>
         <!-- Spring Boot -->
-        <!--<spring-boot.version>1.2.0.BUILD-SNAPSHOT</spring-boot.version>--> <!-- Use *.BUILD-SNAPSHOT on development environment. -->
-        <spring-boot.version>1.1.8.RELEASE</spring-boot.version> <!-- Use *.RELEASE on production environment. -->
+        <spring-boot.version>1.2.0.BUILD-SNAPSHOT</spring-boot.version> <!-- Use *.BUILD-SNAPSHOT on development environment. -->
+        <!--<spring-boot.version>1.1.8.RELEASE</spring-boot.version>--> <!-- Use *.RELEASE on production environment. -->
         <!-- Embedded Tomcat -->
-        <tomcat.version>[8.0.14,8.0.99]</tomcat.version>
+        <tomcat.version>[8.0.14,8.0.99]</tomcat.version> <!-- Set to a range during development. -->
+        <!--<tomcat.version>8.0.14</tomcat.version>--> <!-- Set to a particular version to create production artifact. -->
         <!-- project -->
         <project-name>${project.artifactId}</project-name>
     </properties>

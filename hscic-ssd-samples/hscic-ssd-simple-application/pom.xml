@@ -2,9 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>uk.gov.hscic.ssd</groupId>
     <artifactId>hscic-ssd-simple-application</artifactId>
-    <version>0.1.0.BUILD-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>HSCIC SSD Corporate POM Simple Web Application</name>
     <description>Demo project - Web Application</description>
@@ -30,11 +28,18 @@
             <artifactId>hscic-ssd-simple-library</artifactId>
         </dependency>
 
+        <!-- JSTL Template Engine -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
         <!-- HSCIC SSD Web Starter -->
         <dependency>
             <groupId>uk.gov.hscic.ssd</groupId>
             <artifactId>hscic-ssd-starter-web</artifactId>
         </dependency>
+
         <!-- HSCIC SSD Tomcat Starter -->
         <dependency>
             <groupId>uk.gov.hscic.ssd</groupId>

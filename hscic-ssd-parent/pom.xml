@@ -20,6 +20,8 @@
         <spring-boot.version>1.1.6.RELEASE</spring-boot.version>
         <!-- Tomcat -->
         <tomcat.version>8.0.12</tomcat.version>
+        <!-- Java EE Web API -->
+        <javaee-web-api.version>7.0</javaee-web-api.version>
 
         <!-- project -->
         <project-name>corporate-pom</project-name>
@@ -104,6 +106,13 @@
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-jsp-api</artifactId>
                 <version>${tomcat.version}</version>
+            </dependency>
+
+            <!-- Java EE Web API -->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>${javaee-web-api.version}</version>
             </dependency>
 
         </dependencies>
